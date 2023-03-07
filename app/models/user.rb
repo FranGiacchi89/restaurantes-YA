@@ -11,6 +11,5 @@ class User < ApplicationRecord
   # user.restaurants.each do |restaurant|
 
   # Validaciones
-  validates :name, :address, presence: true
 
 end
