@@ -6,4 +6,7 @@ class Food < ApplicationRecord
   # Validaciones
   validates :name, :description, :price, :available, presence: true
 
+  # Active Record
+  has_one_attached :photo
+
 end

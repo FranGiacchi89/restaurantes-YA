@@ -12,4 +12,7 @@ class Restaurant < ApplicationRecord
   # Validaciones
   validates :name, :address, presence: true
 
+  # Active Record
+  has_one_attached :photo
+
 end
