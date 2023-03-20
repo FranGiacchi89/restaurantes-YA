@@ -5,3 +5,27 @@
       <a class="btn btn-flat" href="#">Registrate ahora!</a>
     </div>
   </div>
+
+<div class="container">
+  <div id="header">
+    <h1>Restaurantes YA!</h1>
+    <p>Las mejores comidas del mundo</p>
+  </div>
+  <div class="row">
+    <% @foods.sample(3).each do |food| %>
+      <div class="col-4">
+        <div class="card">
+          <div class="card-image">
+            <%= image_tag food.photo %>
+          </div>
+          <div class="card-text">
+            <p class="card-meal-type"> <%= food.name %> </p>
+            <h2 class="card-title"> <%= food.restaurant.name %> </h2>
+            <p class="card-body"> <%= food.description %> </p>
+          </div>
+          <div class="card-price"> <%= number_to_currency(food.price, delimiter: ".", precision: 0, unit: "ARS $") %> </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
