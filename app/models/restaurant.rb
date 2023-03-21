@@ -11,6 +11,7 @@ class Restaurant < ApplicationRecord
 
   # Validaciones
   validates :name, :address, presence: true
+  validates :name, length: { minimum: 1, maximum: 500 }
 
   # Active Record
   has_one_attached :photo
