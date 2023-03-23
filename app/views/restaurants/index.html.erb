@@ -9,7 +9,11 @@
           <article>
             <div class="article-wrapper">
               <figure>
+              <%= if restaurant.photo.attached? %>
                 <%= image_tag restaurant.photo %>
+              <% else %>
+                <%= image_tag "logo.jpg" %>
+              <% end %>
               </figure>
               <div class="article-body">
                 <h2> <%= restaurant.name.truncate(8) %> </h2>

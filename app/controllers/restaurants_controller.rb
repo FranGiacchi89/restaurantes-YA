@@ -12,8 +12,19 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.new
   end
 
-  def edit
+  def create
+    @restaurant = Restaurant.new(restaurant_params)
+    @restarant.user_id = current_user.id
+    @restaurant.save
+    if @restaurant.save
+      redirect_to restaurants_path, notice: "El restaurante se creo exitosamente"
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
 
+  def restaurant_params
+    params.require(:restaurant).permit(:name, :address, :specialty, :description, :photo)
   end
 
 end

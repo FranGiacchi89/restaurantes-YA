@@ -11,7 +11,7 @@
         <h1> <%= @food.name %> </h1>
         <p class="card_paragraph">  <%= @food.description %> </p>
         <div class="button-card w-50 mt-5">
-          <%= link_to "Volver", foods_path, class: "btn btn-lg btn-block" %>
+          <%= link_to "Volver", foods_path, class: "btn-show btn-lg btn-block" %>
           <%= link_to foods_path do %>
             <i class="icono fa-solid fa-cart-plus"></i>
           <% end %>
