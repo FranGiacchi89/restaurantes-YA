@@ -1,0 +1,52 @@
+.button-card {
+  overflow: hidden; /* para evitar que los elementos floten fuera del contenedor */
+}
+
+.btn {
+  float: left;
+  background-color: #14a2fa;
+  color: white;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: black;
+  transition: ease-in all 0.4s;
+  color: white !important;
+  border: none;
+}
+
+.icono {
+  float: right;
+  font-size: 3rem;
+  color: #14a2fa;
+  padding-right: 2rem;
+}
+
+.icono:hover {
+  transition: ease-in all 0.4s;
+  color: black;
+}
+
+// Alternativamente, también se puede utilizar la propiedad text-align en el contenedor para alinear los elementos, en lugar de usar la propiedad float. Para ello, establece text-align: justify en el contenedor y display: inline-block en los elementos que deseas alinear. Luego, establece text-align: left y text-align: right en los elementos respectivos.
+
+// Por ejemplo:
+
+// .container {
+//   text-align: justify;
+// }
+
+// .izquierda,
+// .derecha {
+//   display: inline-block;
+// }
+
+// .izquierda {
+//   text-align: left;
+// }
+
+// .derecha {
+//   text-align: right;
+// }
+
+// En este caso, la propiedad text-align: justify se aplica al contenedor, y display: inline-block se aplica a los elementos izquierda y derecha. Luego, se usa text-align: left y text-align: right en los elementos respectivos para alinearlos a cada extremo del contenedor.

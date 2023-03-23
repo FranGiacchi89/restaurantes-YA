@@ -1,6 +1,7 @@
 class RestaurantsController < ApplicationController
   def index
-    @restaurants = current_user.restaurants.order(:created_at)
+    @restaurants = Restaurant.all
+    # @restaurants = current_user.restaurants.order(:created_at)
   end
 
   def show
@@ -9,6 +10,10 @@ class RestaurantsController < ApplicationController
 
   def new
     @restaurant = Restaurant.new
+  end
+
+  def edit
+
   end
 
 end

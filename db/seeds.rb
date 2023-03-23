@@ -179,7 +179,7 @@ puts "Creating foods"
 
 food1 = Food.create!(
   name: "Biffe chorizo",
-  description: "Carne premium, asada al carbon",
+  description: "Carne premium, asada a la leña. El bife de chorizo es un corte de carne de res muy popular que se obtiene de la zona lumbar del animal, específicamente de la parte cercana a la costilla, y se caracteriza por tener una forma alargada y ovalada. La carne del bife de chorizo es jugosa, tierna y tiene un sabor intenso y rico en grasas intramusculares que la hacen muy sabrosa.",
   price: 14500,
   available: true,
   restaurant: restaurant1)
@@ -189,7 +189,7 @@ food1 = Food.create!(
 
 food2 = Food.create!(
   name: "Cerdo al spiedo",
-  description: "Crujiente y sabrosa carne de cerdo cocinada a fuego lento",
+  description: "Crujiente y sabrosa carne de cerdo cocinada a fuego lento. Esta es una preparación tradicional que se realiza asando un cerdo entero sobre una parrilla rotativa. Ofrecemos diferentes opciones y acompañamientos que complementen el sabor del plato principal.",
   price: 18500,
   available: true,
   restaurant: restaurant2)
@@ -199,17 +199,17 @@ food2 = Food.create!(
 
 food3 = Food.create!(
   name: "Carne mongoliana",
-  description: "Carne, cebollin, aji, soya y condimentos",
+  description: "La carne mongoliana es un plato de la cocina de Mongolia y de algunas regiones de China. Se trata de una preparación de carne de res tierna y jugosa, marinada y cocinada en una salsa agridulce y especiada. Es una carne tierna y jugosa, con un sabor agridulce y ligeramente picante, que se puede servir con arroz, fideos o vegetales salteados.",
   price: 6500,
   available: true,
   restaurant: restaurant3)
-  file = URI.open("https://estag.fimagenes.com/imagenesred/10656300.jpg")
+  file = URI.open("https://img.freepik.com/foto-gratis/delicioso-goulash-listo-cenar_23-2149370900.jpg?w=1480&t=st=1679494169~exp=1679494769~hmac=745b4575a3843c70e89f3e2f32c0d237c6272977358295631d8e3f5acac4a510")
   food3.photo.attach(io: file, filename: "21.png", content_type: "image/png")
   food3.save
 
 food4 = Food.create!(
   name: "Milanesa Napolitana",
-  description: "Milanesa estilo napolitano con papas fritas",
+  description: "La milanesa se prepara a partir de filetes de carne de res finos, que se sazonan con sal, pimienta y ajo en polvo, se pasan por huevo batido y pan rallado, y se fríen en aceite caliente hasta que queden dorados y crujientes.Una vez fritas, las milanesas se cubren con salsa de tomate casera o comprada, se colocan rebanadas de jamón y queso sobre la salsa y se gratinan en el horno hasta que el queso se derrita y se dore.",
   price: 6500,
   available: true,
   restaurant: restaurant1)
@@ -218,28 +218,28 @@ food4 = Food.create!(
   food4.save
 
 food5 = Food.create!(
-  name: "Spaghetti al pesto",
-  description: "Spaghetti al dente con pesto genovese",
+  name: "Fetuccine al pesto",
+  description: "El fetuccine al pesto es un plato de pasta que se originó en la región de Liguria, en Italia. Consiste en una pasta larga y plana, como el fetuccine, cubierta con una salsa hecha a base de albahaca, ajo, piñones, queso parmesano y aceite de oliva. La pasta se cocina en agua salada hasta que esté al dente, se escurre y se mezcla con la salsa pesto caliente.",
   price: 6500,
   available: true,
   restaurant: restaurant1)
-  file = URI.open("https://www.lavanguardia.com/files/og_thumbnail/uploads/2020/05/29/5ed11fb61d750.jpeg")
+  file = URI.open("https://img.freepik.com/foto-gratis/fettuccine-pasta-brocoli-pollo-salsa-cremosa-especias-pimienta-vista-lateral_141793-3540.jpg?w=1480&t=st=1679491732~exp=1679492332~hmac=a67a851c01e22fdd349b5b58a4e920547a355f73e59e261707938058d9be6dc6")
   food5.photo.attach(io: file, filename: "21.png", content_type: "image/png")
   food5.save
 
 food6 = Food.create!(
   name: "Pizza Margherita",
-  description: "Pizza a la piedra con salsa de tomate, muzzarella y albahaca",
+  description: "La pizza margherita es un tipo de pizza originario de Nápoles, Italia. Se elabora con una base de masa de pizza fina y crujiente, cubierta con salsa de tomate, mozzarella fresca y hojas de albahaca fresca.La pizza margherita se termina con hojas frescas de albahaca, que aportan un sabor y aroma fresco y distintivo.",
   price: 6500,
   available: true,
   restaurant: restaurant2)
-  file = URI.open("https://img2.rtve.es/i/?w=1600&i=1645806144885.jpg")
+  file = URI.open("https://img.freepik.com/foto-gratis/pizza_144627-39491.jpg?w=1480&t=st=1679491563~exp=1679492163~hmac=22c6f93188d28106b71ddf37939e652fa207af0151ebdab4f50636f9619b8882")
   food6.photo.attach(io: file, filename: "21.png", content_type: "image/png")
   food6.save
 
 food7 = Food.create!(
   name: "Rabas",
-  description: "Porcion de rabas con limon",
+  description: "Las rabas con limón son un plato típico de la cocina de la región del Río de la Plata, especialmente en Argentina y Uruguay. Consiste en anillos de calamar rebozados y fritos, servidos con una rodaja de limón fresco para exprimir por encima. Las rabas se preparan cortando los calamares en anillos y luego se pasan por una mezcla de harina y condimentos como pimentón, ajo y sal. Después, se fríen en aceite caliente hasta que estén dorados y crujientes.",
   price: 6500,
   available: true,
   restaurant: restaurant2)
@@ -249,7 +249,7 @@ food7 = Food.create!(
 
 food8 = Food.create!(
   name: "Pad thai",
-  description: "Pad thai con salsa de soja especial",
+  description: "El Pad Thai es un plato muy popular de la cocina tailandesa que consiste en fideos de arroz salteados con huevo, tofu, brotes de soja, cebolla, cacahuetes y otros ingredientes. La preparación comienza remojando los fideos de arroz en agua caliente hasta que estén suaves. Luego, se saltean los ingredientes en una sartén o wok con un poco de aceite de cacahuete, comenzando con la cebolla y el tofu. El plato se sirve caliente, adornado con cacahuetes picados, cilantro fresco y una rodaja de lima para darle un toque de frescura.",
   price: 6500,
   available: true,
   restaurant: restaurant3)
@@ -259,7 +259,7 @@ food8 = Food.create!(
 
 food9 = Food.create!(
   name: "Ribs de cerdo a la barbacoa",
-  description: "Ribs de cerdo con slasa baracoa y papas rellenas",
+  description: "Las costillas de cerdo a la barbacoa son una deliciosa especialidad culinaria de la cocina estadounidense. Consisten en costillas de cerdo marinadas y cocidas lentamente en una salsa de barbacoa, que les da un sabor dulce y ahumado. Esta deliciosa carne se acompaña de papas rellenas",
   price: 6500,
   available: true,
   restaurant: restaurant3)
