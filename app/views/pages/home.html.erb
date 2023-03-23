@@ -1,6 +1,6 @@
-  <div class="banner">
+  <div class="banner mb-5">
     <div class="container">
-      <h1>Los mejores <strong>restaurantes</strong> del mundo <strong>los encuentras en Restaurantes YA!</strong></h1>
+      <h1>Los mejores restaurantes del mundo los encuentras en Restaurantes YA!</h1>
       <p>Se parte de los miles de restaurantes que llegan a nuestros usuarios.</p>
       <a class="btn btn-flat" href="#">Registrate ahora!</a>
     </div>
@@ -21,7 +21,7 @@
           <div class="card-text">
             <p class="card-meal-type"> <%= food.name %> </p>
             <h2 class="card-title"> <%= food.restaurant.name %> </h2>
-            <p class="card-body"> <%= food.description %> </p>
+            <p class="card-body"> <%= food.description.truncate(70) %> </p>
           </div>
           <div class="card-price"> <%= number_to_currency(food.price, delimiter: ".", precision: 0, unit: "ARS $") %> </div>
         </div>
@@ -34,6 +34,7 @@
   <div id="header">
     <h1>Ultimos Restaurantes Agregados</h1>
   </div>
+  <%# <!-- %>
   <div class="row mb-4">
     <% @foods.last(3).each do |food| %>
       <div class="col-4">
@@ -59,4 +60,5 @@
       </div>
     <% end %>
   </div>
+  <%# --> %>
 </div>
