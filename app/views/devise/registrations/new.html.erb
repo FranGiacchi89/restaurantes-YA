@@ -14,17 +14,6 @@
                       required: false,
                       autofocus: true,
                       input_html: { autocomplete: "email" } %>
-          <%= f.input :address,
-                      required: false,
-                      autofocus: true,
-                      input_html: { autocomplete: "dirección" } %>
-          <%= f.input :photo, label: "Foto",
-                      required: false,
-                      autofocus: true,
-                      input_html: { autocomplete: "carga tu foto de perfil", class:"" } %>
-          <%= f.input :password,
-                      required: false,
-                      input_html: { autocomplete: "contraseña" } %>
           <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
         </div>
         <div class="form-actions">
