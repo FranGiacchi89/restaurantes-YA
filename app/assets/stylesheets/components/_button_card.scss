@@ -28,6 +28,56 @@
   color: black;
 }
 
+.btn-show {
+  background-color: #14a2fa;
+  color: white;
+  font-weight: 500;
+  font-size: 2.1rem;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+}
+
+.btn-show:hover {
+  transition: ease-in all 0.4s;
+  background-color: black;
+  color: white;
+}
+
+.btn-restaurant {
+  background-color: #14a2fa;
+  color: white;
+  font-weight: 500;
+  font-size: 2.1rem;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+}
+
+.btn-restaurant:hover {
+  transition: ease-in all 0.4s;
+  background-color: black;
+  color: white;
+}
+
+.btn-new {
+  float: left;
+  background-color: #14a2fa;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.4rem;
+  border-radius: 0.1rem;
+  margin-left: 0.5rem;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+}
+
+.btn-new:hover {
+  background-color: black;
+  transition: ease-in all 0.4s;
+  color: white !important;
+  border: none;
+}
+
 // Alternativamente, también se puede utilizar la propiedad text-align en el contenedor para alinear los elementos, en lugar de usar la propiedad float. Para ello, establece text-align: justify en el contenedor y display: inline-block en los elementos que deseas alinear. Luego, establece text-align: left y text-align: right en los elementos respectivos.
 
 // Por ejemplo:
