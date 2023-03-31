@@ -14,7 +14,7 @@ class RestaurantsController < ApplicationController
 
   def create
     @restaurant = Restaurant.new(restaurant_params)
-    @restarant.user_id = current_user.id
+    @restaurant.user_id = current_user.id
     @restaurant.save
     if @restaurant.save
       redirect_to restaurants_path, notice: "El restaurante se creo exitosamente"
@@ -24,7 +24,6 @@ class RestaurantsController < ApplicationController
   end
 
   def restaurant_params
-    params.require(:restaurant).permit(:name, :address, :specialty, :description, :photo)
+    params.require(:restaurant).permit(:name, :address, :specialty, :description, :photo, :user_id)
   end
-
 end
