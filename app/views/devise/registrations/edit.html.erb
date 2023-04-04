@@ -1,7 +1,9 @@
 <div class="container mt-5 w-75 shadow bg-white p-4 rounded mb-5">
   <div class="row">
     <div class="col-6">
-      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+
+      <%= simple_form_for(:user, :url => new_session_path(:user), :method => :post) do |f| %>
+      <%# <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
         <div class="form-title">
           <h2>Perfil</h2>
         </div>
@@ -18,7 +20,8 @@
                       required: false,
                       autofocus: true,
                       input_html: { autocomplete: "dirección" } %>
-          <%= f.input :photo, label: "Foto",
+          <%# <%= f.input :photo, label: "Foto", %>
+          <%= f.input :photo, as: :file,
                       required: false,
                       autofocus: true,
                       input_html: { autocomplete: "carga tu foto de perfil", class:"" } %>
