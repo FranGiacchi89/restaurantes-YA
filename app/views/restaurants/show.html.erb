@@ -6,17 +6,21 @@
     <div class="row">
       <div class="col-6">
         <% if @restaurant.photo.attached? %>
-          <div class="img-show">
             <%= image_tag @restaurant.photo, class: "w-100" %>
-          </div>
         <% else %>
-          <%= image_tag "logo.jpg" %>
+          <%= image_tag "logo.jpg", :size=>"450x450" %>
         <% end %>
       </div>
       <div class="col-6 px-5">
         <h1> <%= @restaurant.name %> </h1>
         <p class="card_paragraph">  <%= @restaurant.description %> </p>
-        <p> <%= link_to "Volver", restaurants_path, class: "btn-restaurant mt-5" %> </p>
+        <div>
+          <%= link_to "Volver", restaurants_path, class: "btn-restaurant mt-5" %>
+          <%= link_to restaurant_path(@restaurant), data: {turbo_method: :delete, turbo_confirm: "Estas seguro?"} do %>
+              <i class="fa-solid fa-trash"></i>
+              <% end %>
+          <%#= link_to "Eliminar", restaurant_path(@restaurant), data: {turbo_method: :delete, turbo_confirm: "Estas seguro?"}, class: "btn-restaurant mt-5" %>
+        </div>
       </div>
     </div>
   </div>

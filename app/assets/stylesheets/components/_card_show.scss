@@ -7,6 +7,13 @@
   font-size: 1rem;
 }
 
-.img-show {
-  height: 28rem;
+.fa-solid {
+  font-size: 2.6rem;
+  color: #A44841;
+  padding-left: 1.5rem;
+}
+
+.fa-solid:hover {
+  transition: ease-in all 0.4s;
+  color: black;
 }
