@@ -19,7 +19,7 @@
             <%= image_tag food.photo %>
           </div>
           <div class="card-text">
-            <p class="card-meal-type"> <%= food.name %> </p>
+            <p class="card-meal-type"> <%= link_to food.name, food_path(food) %> </p>
             <h2 class="card-title"> <%= food.restaurant.name %> </h2>
             <p class="card-body"> <%= food.description.truncate(70) %> </p>
           </div>

@@ -16,31 +16,15 @@
         <p class="card_paragraph">  <%= @restaurant.description %> </p>
         <div>
           <%= link_to "Volver", restaurants_path, class: "btn-restaurant mt-5" %>
+          <%= link_to edit_restaurant_path(@restaurant) do %>
+            <i class="fa-solid fa-pencil"></i>
+          <% end %>
           <%= link_to restaurant_path(@restaurant), data: {turbo_method: :delete, turbo_confirm: "Estas seguro?"} do %>
-              <i class="fa-solid fa-trash"></i>
-              <% end %>
+            <i class="fa-solid fa-trash"></i>
+          <% end %>
           <%#= link_to "Eliminar", restaurant_path(@restaurant), data: {turbo_method: :delete, turbo_confirm: "Estas seguro?"}, class: "btn-restaurant mt-5" %>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<%#= @restaurant.name %>
