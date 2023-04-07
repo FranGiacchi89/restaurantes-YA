@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :restaurants do
     resources :foods, only: [:new, :create]
+    resources :schedules, only: [:new, :create]
   end
   # Siempre que exista un elemento que depende de otro -en este caso foods depende de restaurants-, debemos codear un nested resource. Una comida le pertenece a un restaurante y un restaurante a un usuario. En los nested resources solo necesito las acciones new y create.
   resources :foods, except: [:new, :create]
+  resources :schedules, except: [:new, :create]
 end
