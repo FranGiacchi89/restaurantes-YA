@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   resources :restaurants do
     resources :foods, only: [:new, :create]
   end
-  # Siempre que exista un elemento que depende de otro, en este foods depende de restaurants, debemos codear un nested resource. Una comida le pertenece a un restaurante y una comida a un usuario. En los nested resources solo necesito las acciones new y create.
+  # Siempre que exista un elemento que depende de otro -en este caso foods depende de restaurants-, debemos codear un nested resource. Una comida le pertenece a un restaurante y un restaurante a un usuario. En los nested resources solo necesito las acciones new y create.
   resources :foods, except: [:new, :create]
 end
