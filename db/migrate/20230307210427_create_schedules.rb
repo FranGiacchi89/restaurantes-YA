@@ -5,7 +5,6 @@ class CreateSchedules < ActiveRecord::Migration[7.0]
       t.time :open_at
       t.time :close_at
       t.references :restaurant, null: false, foreign_key: true
-
       t.timestamps
     end
   end
