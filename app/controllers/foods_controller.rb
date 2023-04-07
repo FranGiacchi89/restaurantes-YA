@@ -1,6 +1,6 @@
 class FoodsController < ApplicationController
   before_action :set_food, only: [:new, :create]
-  before_action :set_id_food, only: [:show, :edit, :update]
+  before_action :set_id_food, only: [:show, :edit, :update, :destroy]
   def index
     @foods = Food.all
     # @foods = current_user.foods.order(:created_at)
@@ -32,6 +32,11 @@ class FoodsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @food.destroy
+    redirect_to foods_path, status: :see_other
   end
 
   private

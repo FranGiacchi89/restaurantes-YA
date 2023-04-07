@@ -78,6 +78,21 @@
   border: none;
 }
 
+.btn-food {
+  background-color: #14a2fa;
+  color: white;
+  font-weight: 500;
+  font-size: 2.1rem;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+}
+
+.btn-food:hover {
+  transition: ease-in all 0.4s;
+  background-color: black;
+  color: white;
+}
+
 // Alternativamente, también se puede utilizar la propiedad text-align en el contenedor para alinear los elementos, en lugar de usar la propiedad float. Para ello, establece text-align: justify en el contenedor y display: inline-block en los elementos que deseas alinear. Luego, establece text-align: left y text-align: right en los elementos respectivos.
 
 // Por ejemplo:
